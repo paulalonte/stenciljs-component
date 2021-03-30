@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>My Modal</title>
+    <link rel="stylesheet" href="main.css">
+
+    <script type="module" src="/build/basic.esm.js"></script>
+    <script nomodule src="/build/basic.js"></script>
+  </head>
+  <body>
+    <button type="button" id="btnModal">Open Modal</button>
+    <pa-modal heading="This is my Sample Modal">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum aperiam dolores? Aspernatur quisquam fugit quaerat amet temporibus, enim nihil aliquam eaque nulla similique dolor quae quidem asperiores provident voluptate.
+      </p>
+    </pa-modal>
+
+    <script>
+      const modal = document.querySelector('pa-modal');
+      const btnModal = document.querySelector('#btnModal');
+
+      btnModal.addEventListener('click',() => {
+        modal.openModal();
+      })
+
+      // setTimeout(() => {
+      //   console.log(modal.open);
+      //   if(!modal.open) {
+      //     modal.open = true;
+      //   }
+      // }, 3000)
+      
+    </script>
+  </body>
+</html>
